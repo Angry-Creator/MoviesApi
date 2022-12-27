@@ -17,7 +17,7 @@ App.use(randomRoute);
 App.use(listRoute);
 App.use(searchRoute);
 
-App.all("*", (req, res)=>{
+App.all("*", (req, res) => {
     res.status(404).end("404 Error");
 });
 

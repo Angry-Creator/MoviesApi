@@ -5,5 +5,5 @@ const router = express.Router();
 
 module.exports = router.get("/random", (req, res) => {
     const randIndex = Math.floor(Math.random() * (database.length - 0) + 0);
-    res.status(200).json({result: database[randIndex]});
+    res.status(200).send(database[randIndex]);
 });
