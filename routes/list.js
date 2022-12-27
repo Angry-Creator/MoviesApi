@@ -14,7 +14,7 @@ module.exports = router.get("/list/:id", (req, res) => {
                 listValue.push(database[i]);
             }
         }
-        res.status(200).send(listValue);
+        res.status(200).json({result: listValue});
     } else {
         res.status(404).end("Page Number is either invalid or 0");
     }

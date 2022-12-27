@@ -12,5 +12,5 @@ module.exports = router.get("/search/:item", (req, res) => {
             movieList.push(database[i]);
         }
     }
-    res.send(movieList);
+    res.status(200).json({result: movieList});
 });
